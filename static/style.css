@@ -1,2 +1,13 @@
-body{background-color: rgb(212, 45, 45);}
+#checkbox-container{background-color: rgb(211, 17, 17)!important;}
 
+/* html body { background: grey !important;} */
+
+body { background-color: #000000 !important;
+margin-bottom: 20px;}
+
+h2{color: white;}
+
+
+h1 {color:rgb(211, 17, 17);}
+
+#nav-toggle-button span{background-color: black !important;}
