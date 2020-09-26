@@ -1,40 +1,40 @@
 
 
-// var formValues = JSON.parse(localStorage.getItem('formValues')) || {};
-// var $checkboxes = $("#checkbox-container :checkbox");
-// var $button = $("#checkbox-container button");
+var formValues = JSON.parse(localStorage.getItem('formValues')) || {};
+var $checkboxes = $("#checkbox-container :checkbox");
+var $button = $("#checkbox-container button");
 
-// function allChecked(){
-//   return $checkboxes.length === $checkboxes.filter(":checked").length;
-// }
+function allChecked(){
+  return $checkboxes.length === $checkboxes.filter(":checked").length;
+}
 
-// function updateButtonStatus(){
-//   $button.text(allChecked()? "Uncheck all" : "Check all");
-// }
+function updateButtonStatus(){
+  $button.text(allChecked()? "Uncheck all" : "Check all");
+}
 
-// function handleButtonClick(){
-//   $checkboxes.prop("checked", allChecked()? false : true)
-// }
+function handleButtonClick(){
+  $checkboxes.prop("checked", allChecked()? false : true)
+}
 
-// function updateStorage(){
-//   $checkboxes.each(function(){
-//     formValues[this.id] = this.checked;
-//   });
+function updateStorage(){
+  $checkboxes.each(function(){
+    formValues[this.id] = this.checked;
+  });
 
-//   formValues["buttonText"] = $button.text();
-//   localStorage.setItem("formValues", JSON.stringify(formValues));
-// }
+  formValues["buttonText"] = $button.text();
+  localStorage.setItem("formValues", JSON.stringify(formValues));
+}
 
-// $button.on("click", function() {
-//   handleButtonClick();
-//   updateButtonStatus();
-//   updateStorage();
-// });
+$button.on("click", function() {
+  handleButtonClick();
+  updateButtonStatus();
+  updateStorage();
+});
 
-// $checkboxes.on("change", function(){
-//   updateButtonStatus();
-//   updateStorage();
-// });
+$checkboxes.on("change", function(){
+  updateButtonStatus();
+  updateStorage();
+});
 
 var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
     $checkboxes = $("#checkbox-container :checkbox");
@@ -53,10 +53,10 @@ $.each(checkboxValues, function(key, value) {
 });
 
 
-// // On page load
-// $.each(formValues, function(key, value) {
-//   $("#" + key).prop('checked', value);
-// });
+// On page load
+$.each(formValues, function(key, value) {
+  $("#" + key).prop('checked', value);
+});
 
-// $button.text(formValues["buttonText"]);
+$button.text(formValues["buttonText"]);
 
