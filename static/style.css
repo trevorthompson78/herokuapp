@@ -13,13 +13,24 @@ h1 {color:rgb(211, 17, 17);}
 #nav-toggle-button span{background-color: black !important;}
 
 input[type='checkbox'] {
-    width: 30px;
-    height: 30px;        
+    width: 25px;
+    height: 25px;        
 }
 
 label{
-    font-size: x-large;
+    font-size: large;
     color: black;
     font-style: italic;
+}
+
+.mylist{
+    list-style: none;
+}
+
+.mylist li{
+    color: red
+}
+.mylist li a{
+    color: red
 }
 

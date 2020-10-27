@@ -86,5 +86,9 @@ def rings():
 def earings():
     return render_template('earings.html')
 
+@app.route('/herbs')
+def herbs():
+    return render_template('herbs.html')
+
 if __name__ == '__main__':
     app.run(debug = True)
